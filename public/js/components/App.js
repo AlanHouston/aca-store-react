@@ -1,28 +1,23 @@
 function App(props){
+    const productDetails = props.products.map((p,i)=>{
+        return <ProductDetail key={i} product={p} />
+    });
     return (
     <div>
-        <div class="App">
-        <Header />        
-           <div class="container">
-               <div class="row">
-                   <div class="col-md-3">
-                       <p class="lead">Shop Name</p>
-                       <div class="list-group">
-                           <a href="#" class="list-group-item">Category 1</a>
-                           <a href="#" class="list-group-item">Category 2</a>
-                           <a href="#" class="list-group-item">Category 3</a>
-                       </div>
-                   </div>
-       
-                   <div class="col-md-9">
+        <div className="App">
+            <Header numberOfItemsInCart={props.numberOfItemsInCart}/>        
+            <div className="container">
+               <div className="row">
+                   <LeftMenu />
+                   <div className="col-md-9">
                         <Carousel />
-                       <div class="row">
-                           <ProductDetail />
-                            </div>
+                        <div className="row">
+                        {productDetails}
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div class="container">
+                <div className="container">
                 <hr/>
                 <Footer />
             </div>
