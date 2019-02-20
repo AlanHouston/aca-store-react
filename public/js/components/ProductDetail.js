@@ -8,6 +8,7 @@ function ProductDetail(props){
     for (let i=0; i<(5-props.product.rating); i++){
         emptyStars.push(<span className="glyphicon glyphicon-star-empty" key={i}></span>);
     }
+
     return(
         <div className="col-sm-4 col-lg-4 col-md-4">
             <div className="thumbnail">
@@ -27,6 +28,12 @@ function ProductDetail(props){
                         <span className="glyphicon glyphicon-star"></span>
                         <span className="glyphicon glyphicon-star"></span> */}
                     </p>
+                    <button onClick={()=>{
+                        // event.preventDefault(); not sure if needed, but we'll see
+                        // props.addToCart(props.product);
+                        props.addItemToCart(props.product);
+                    }}>Add to Cart
+                    </button>
                 </div>
             </div>
         </div>

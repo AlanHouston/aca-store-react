@@ -87,3 +87,10 @@ https://blackrockdigital.github.io/startbootstrap-shop-homepage/
 ### Fetch
 * Use fetch to retrieve products from your web api
 * Where should the fetch call be made?
+
+
+Button!
+event handler: onclick
+function that handles changing number of items in cart
+send that function somewhere
+have header update bny rerendering

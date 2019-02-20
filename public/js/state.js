@@ -1,4 +1,5 @@
 state =  {
+    cart: [],
     numberOfItemsInCart: 0,
     products: [ {
       "id": 1,
